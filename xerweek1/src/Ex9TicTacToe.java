@@ -68,7 +68,7 @@ public class Ex9TicTacToe {
 
     }
 
-1
+
     boolean isFull(char[] board) {
         return false;   // For now return false
     }
