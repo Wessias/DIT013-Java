@@ -56,29 +56,22 @@ public class Neighbours extends Application {
         int dissatisfiedFound = 0;
 
 
-
         // TODO
         // 1 Loop to find dissatisfied and nulls.
 
         for (int i = 0; i < world.length; i++) {
             for (int j = 0; j < world.length; j++) {
-                //CHECK TYPE OF ACTOR (RED, BLUE, NULL), and save dissatisfied and null pos
-                if (world[i][j] == null){
+                //CHECK TYPE OF ACTOR (null or color), and save dissatisfied and null pos
+                if (world[i][j] == null) {
                     int[] nullPos = {i, j};
                     nullCords[nullFound] = nullPos;
                     nullFound++;
-                } else if (world[i][j].color == Color.RED) {
-                    System.out.println("RED");
-
+                } else if (!isSatisfied(world, threshold, i, j)) {
+                    int[] disPos = {i, j};
+                    dissatisfiedCords[dissatisfiedFound] = disPos;
+                    dissatisfiedFound++;
                 }
-                else{
-                    System.out.println("BLUE");
-                }
-
-
-                //
             }
-
         }
 
 
@@ -92,7 +85,7 @@ public class Neighbours extends Application {
     // That's why we must have "@Override" and "public" (just accept for now)
     @Override
     public void init() {
-        //test();    // <---------------- Uncomment to TEST, see below!
+        test();    // <---------------- Uncomment to TEST, see below!
 
         // %-distribution of RED, BLUE and NONE
         double[] dist = {0.25, 0.25, 0.5};
@@ -109,16 +102,15 @@ public class Neighbours extends Application {
     }
 
     // TODO Many methods here, break down of init() and updateWorld()
-    Actor[][] populateWorld(double[] dist, Actor[][] emptyWorld){
+    Actor[][] populateWorld(double[] dist, Actor[][] emptyWorld) {
         for (int i = 0; i < emptyWorld.length; i++) {
             for (int j = 0; j < emptyWorld.length; j++) {
                 double rand = Math.random();
-                if (rand < dist[0]){
+                if (rand < dist[0]) {
                     emptyWorld[i][j] = new Actor(Color.RED);
                 } else if (rand < dist[0] + dist[1]) {
                     emptyWorld[i][j] = new Actor(Color.BLUE);
-                }
-                else {
+                } else {
                     emptyWorld[i][j] = null;
                 }
             }
@@ -127,16 +119,60 @@ public class Neighbours extends Application {
         return emptyWorld;
     }
 
-    Boolean isSatisfied(Actor[][] world, double threshold){
-        return false;
+
+    Boolean isSatisfied(Actor[][] world, double threshold, int startRow, int startCol) {
+        //Check surrounding
+        double sameColor = 0;
+        double totActor = 0;
+
+        //Is this pretty much copy paste? Perhaps. Does it work? Perhaps. Could it be done utilizing methods in the if statements? Perhaps.
+        for (int i = -1; i < 2; i += 2) {
+            if (isValidLocation(world.length, startRow + i, startCol) && world[startRow + i][startCol] != null) {
+                totActor++;
+                if (world[startRow][startCol].color == world[startRow + i][startCol].color) {
+                    sameColor++;
+                }
+            }
+            if (isValidLocation(world.length, startRow, startCol + i) && world[startRow][startCol + i] != null) {
+                totActor++;
+                if (world[startRow][startCol].color == world[startRow][startCol + i].color) {
+                    sameColor++;
+                }
+            }
+            if (isValidLocation(world.length, startRow + i, startCol + i) && world[startRow + i][startCol + i] != null) {
+                totActor++;
+                if (world[startRow][startCol].color == world[startRow + i][startCol + i].color) {
+                    sameColor++;
+                }
+            }
+            if (isValidLocation(world.length, startRow - i, startCol + i) && world[startRow - i][startCol + i] != null) {
+                totActor++;
+                if (world[startRow][startCol].color == world[startRow - i][startCol + i].color) {
+                    sameColor++;
+                }
+            }
+        }
+        //System.out.println(sameColor);
+        //System.out.println(totActor);
+        //System.out.println(sameColor / totActor);
+        if (totActor != 0) {
+            return ((sameColor / totActor) >= threshold);
+        }
+        //Redundant else but w/e
+        else {
+            return false;
+        }
+
+
     }
+
 
     // Check if inside world
     boolean isValidLocation(int size, int row, int col) {
         return 0 <= row && row < size && 0 <= col && col < size;
     }
 
-    Actor doIt(Actor[][] world){
+    Actor doIt(Actor[][] world) {
         return world[0][0];
     }
 
@@ -153,9 +189,9 @@ public class Neighbours extends Application {
         Actor[][] testWorld = new Actor[][]{
                 {new Actor(Color.RED), new Actor(Color.RED), null},
                 {null, new Actor(Color.BLUE), null},
-                {new Actor(Color.RED), null, new Actor(Color.BLUE)}
-        };
-        System.out.println(testWorld[0][1] == null);
+                {new Actor(Color.RED), null, new Actor(Color.BLUE)}};
+
+        System.out.println(isSatisfied(testWorld, 0.5, 2, 0));
 
 
         double th = 0.5;   // Simple threshold used for testing
@@ -169,7 +205,6 @@ public class Neighbours extends Application {
 
         // TODO  More tests here. Implement and test one method at the time
         // TODO Always keep all tests! Easy to rerun if something happens
-
 
 
         exit(0);
