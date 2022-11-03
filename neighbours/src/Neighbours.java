@@ -4,13 +4,10 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.util.Pair;
 
-import java.text.AttributedCharacterIterator;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 import static java.lang.Math.round;
@@ -76,8 +73,22 @@ public class Neighbours extends Application {
 
 
         //Shuffle nulls.
+        nullCords = shuffleFirstNIndexInArray(nullCords, nullFound);
 
         //Swap nulls with dissatisfied.
+        for (int i = 0; i < dissatisfiedFound; i++) {
+            //nullFound should be constant so don't really need to check it every iteration.
+            if (i < nullFound) {
+                //method that swaps position of dissatisfied with nulls
+                world = swapDissatisfiedWithNull(world, dissatisfiedCords[i], nullCords[i]);
+                continue;
+            } else {
+                //Code gets here if there are more dissatisfied than null spots.
+                //So the last dissatisfied are left as they are for this update iteration.
+                break;
+            }
+
+        }
     }
 
     // This method initializes the world variable with a random distribution of Actors
@@ -85,12 +96,12 @@ public class Neighbours extends Application {
     // That's why we must have "@Override" and "public" (just accept for now)
     @Override
     public void init() {
-        test();    // <---------------- Uncomment to TEST, see below!
+        //test();    // <---------------- Uncomment to TEST, see below!
 
         // %-distribution of RED, BLUE and NONE
         double[] dist = {0.25, 0.25, 0.5};
         // Number of locations (places) in world (must be a square)
-        int nLocations = 900;   // Should also try 90 000
+        int nLocations = 90000;   // Should also try 90 000
 
         // TODO
         world = new Actor[(int) sqrt(nLocations)][(int) sqrt(nLocations)];
@@ -107,9 +118,9 @@ public class Neighbours extends Application {
             for (int j = 0; j < emptyWorld.length; j++) {
                 double rand = Math.random();
                 if (rand < dist[0]) {
-                    emptyWorld[i][j] = new Actor(Color.RED);
+                    emptyWorld[i][j] = new Actor(Color.LIGHTGREEN);
                 } else if (rand < dist[0] + dist[1]) {
-                    emptyWorld[i][j] = new Actor(Color.BLUE);
+                    emptyWorld[i][j] = new Actor(Color.PURPLE);
                 } else {
                     emptyWorld[i][j] = null;
                 }
@@ -125,7 +136,7 @@ public class Neighbours extends Application {
         double sameColor = 0;
         double totActor = 0;
 
-        //Is this pretty much copy paste? Perhaps. Does it work? Perhaps. Could it be done utilizing methods in the if statements? Perhaps.
+        //Is this pretty much copy paste? Perhaps. Does it work? Perhaps. Could it be shortened utilizing methods in the if statements? Perhaps.
         for (int i = -1; i < 2; i += 2) {
             if (isValidLocation(world.length, startRow + i, startCol) && world[startRow + i][startCol] != null) {
                 totActor++;
@@ -162,8 +173,30 @@ public class Neighbours extends Application {
         else {
             return false;
         }
+    }
 
 
+    int[][] shuffleFirstNIndexInArray(int[][] arr, int n) {
+        Random rando = new Random();
+
+        for (int i = 0; i < n; i++) {
+            int randoIndex = rando.nextInt(n);
+            int[] temp = arr[randoIndex];
+            arr[randoIndex] = arr[i];
+            arr[i] = temp;
+        }
+
+        return arr;
+    }
+
+    //Incredibly general methods are being used.
+    Actor[][] swapDissatisfiedWithNull(Actor[][] world, int[] dissatisfiedCords, int[] nullCords) {
+        Color color = world[dissatisfiedCords[0]][dissatisfiedCords[1]].color;
+
+        world[dissatisfiedCords[0]][dissatisfiedCords[1]] = null;
+        world[nullCords[0]][nullCords[1]] = new Actor(color);
+
+        return world;
     }
 
 
@@ -204,6 +237,15 @@ public class Neighbours extends Application {
         //out.println(!isValidLocation(size, 0, 3));
 
         // TODO  More tests here. Implement and test one method at the time
+
+        //TEST FOR SHUFFLE ARRAY METHOD
+        //int[][] testArr = {new int[]{1, 2}, new int[]{2, 1}, new int[]{4, 3}, new int[]{5, 3} };
+        //shuffleFirstNIndexInArray(testArr, 3);
+        //out.println(testArr[0][0]);
+        //out.println(testArr[1][0]);
+        //out.println(testArr[2][0]);
+        //out.println(testArr[3][0]);
+
         // TODO Always keep all tests! Easy to rerun if something happens
 
 
@@ -236,8 +278,11 @@ public class Neighbours extends Application {
 
         // Build a scene graph
         Group root = new Group();
+        StackPane holder = new StackPane();
         Canvas canvas = new Canvas(width, height);
-        root.getChildren().addAll(canvas);
+        holder.getChildren().add(canvas);
+        root.getChildren().add(holder);
+        holder.setStyle("-fx-background-color: black");
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         // Create a timer
