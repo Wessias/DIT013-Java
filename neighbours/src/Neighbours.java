@@ -41,14 +41,14 @@ public class Neighbours extends Application {
     Actor[][] world;              // The world is a square matrix of Actors
 
     // This is the method called by the timer to update the world
-    // (i.e move unsatisfied) approx each 1/60 sec.
+    // (i.e. move unsatisfied) approx each 1/60 sec.
     void updateWorld() {
         // % of surrounding neighbours that are like me
         double threshold = 0.7;
         //List of null index, [[row, col]]
         int[][] nullCords = new int[world.length * world.length][2];
         int nullFound = 0;
-        //List of dissatisfied index, [[row, col]]
+        //List of dissatisfied index, [[row, col], ... ]
         int[][] dissatisfiedCords = new int[world.length * world.length][2];
         int dissatisfiedFound = 0;
 
@@ -68,6 +68,9 @@ public class Neighbours extends Application {
                     dissatisfiedCords[dissatisfiedFound] = disPos;
                     dissatisfiedFound++;
                 }
+                else{
+                    world[i][j].isSatisfied = true;
+                }
             }
         }
 
@@ -81,7 +84,6 @@ public class Neighbours extends Application {
             if (i < nullFound) {
                 //method that swaps position of dissatisfied with nulls
                 world = swapDissatisfiedWithNull(world, dissatisfiedCords[i], nullCords[i]);
-                continue;
             } else {
                 //Code gets here if there are more dissatisfied than null spots.
                 //So the last dissatisfied are left as they are for this update iteration.
@@ -101,7 +103,7 @@ public class Neighbours extends Application {
         // %-distribution of RED, BLUE and NONE
         double[] dist = {0.25, 0.25, 0.5};
         // Number of locations (places) in world (must be a square)
-        int nLocations = 90000;   // Should also try 90 000
+        int nLocations = 900;   // Should also try 90 000
 
         // TODO
         world = new Actor[(int) sqrt(nLocations)][(int) sqrt(nLocations)];
@@ -136,7 +138,8 @@ public class Neighbours extends Application {
         double sameColor = 0;
         double totActor = 0;
 
-        //Is this pretty much copy paste? Perhaps. Does it work? Perhaps. Could it be shortened utilizing methods in the if statements? Perhaps.
+
+        //Is this pretty much copy and paste? Perhaps. Does it work? Perhaps. Could it be shortened utilizing methods in the if statements? Perhaps.
         for (int i = -1; i < 2; i += 2) {
             if (isValidLocation(world.length, startRow + i, startCol) && world[startRow + i][startCol] != null) {
                 totActor++;
@@ -256,7 +259,7 @@ public class Neighbours extends Application {
 
     double width = 500;   // Size for window
     double height = 500;
-    final double margin = 50;
+    final double margin = 5;
     double dotSize;
 
     void fixScreenSize(int nLocations) {
