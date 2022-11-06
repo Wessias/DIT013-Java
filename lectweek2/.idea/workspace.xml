@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3b09f2a3-5127-4d4e-b586-c8a83fb29215" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/ex5matrix/M1Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex5matrix/M1Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lectweek3/src/ex3supersub/ex3supersub.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../lectweek3/src/ex3supersub/ex3supersub.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../xer/xertheory/src/fromweek3/T2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../xer/xertheory/src/fromweek3/T2.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1V6GcucmDm10M4EsEYVMv8qg01U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xer/xertheory" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/unused" />
+      <recent name="$PROJECT_DIR$/src/ex4objectarrays" />
+      <recent name="$PROJECT_DIR$/src/ex2references" />
+      <recent name="$PROJECT_DIR$/src/ex2algorithms" />
+      <recent name="$PROJECT_DIR$/src/ex1compile" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ex4algorithms" />
+      <recent name="ex3methodsrefs" />
+      <recent name="ex1compiler" />
+      <recent name="ex4arrayalgs" />
+      <recent name="ex5matrix" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MR3ObjectArrays">
+    <configuration name="A3NestedLoops" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex4algorithms.A3NestedLoops" />
+      <module name="lectweek2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex4algorithms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="A4BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex4algorithms.A4BubbleSort" />
+      <module name="lectweek2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex4algorithms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C1Names" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex1compiler.C1Names" />
+      <module name="lectweek2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex1compiler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="M1Matrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex5matrix.M1Matrix" />
+      <module name="lectweek2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex5matrix.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MR3ObjectArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex3methods.MR3ObjectArrays" />
+      <module name="lectweek2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex3methods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MR3ObjectArrays" />
+        <item itemvalue="Application.A3NestedLoops" />
+        <item itemvalue="Application.A4BubbleSort" />
+        <item itemvalue="Application.C1Names" />
+        <item itemvalue="Application.M1Matrix" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b09f2a3-5127-4d4e-b586-c8a83fb29215" name="Default Changelist" comment="" />
+      <created>1576566213165</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576566213165</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2434" y="258" width="319" height="410" key="FileChooserDialogImpl" timestamp="1643356171372">
+      <screen x="1920" y="0" width="1280" height="1024" />
+    </state>
+    <state x="771" y="302" width="426" height="480" key="FileChooserDialogImpl/0.0.1920.1200/1920.0.1280.1024@0.0.1920.1200" timestamp="1639733409378" />
+    <state x="2434" y="258" width="319" height="410" key="FileChooserDialogImpl/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1643356171372" />
+  </component>
+</project>

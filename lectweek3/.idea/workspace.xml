@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="02744097-95e1-49a4-9a89-5401abdf6631" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../lectweek2/src/ex5matrix/M1Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lectweek2/src/ex5matrix/M1Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex3supersub/ex3supersub.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex3supersub/ex3supersub.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../xer/xertheory/src/fromweek3/T2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../xer/xertheory/src/fromweek3/T2.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/ex3supersub/SS9Sizes.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1V6DbFYmjqbDYhEyEND4K58gImf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/1w/dat044/xer/OUT/xerweek2" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ex4javafx" />
+      <recent name="$PROJECT_DIR$/src/ex3types" />
+      <recent name="$PROJECT_DIR$/src/ex2types" />
+      <recent name="$PROJECT_DIR$/src/ex1methods" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ex3supersub" />
+      <recent name="ex2methods" />
+      <recent name="ex4javafx" />
+      <recent name="ex1enumwrapper" />
+      <recent name="ex1problems" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ex4javafx" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.FX3Collisions">
+    <configuration name="FX1Animation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex4javafx.FX1Animation" />
+      <module name="lectweek3" />
+      <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/devel/java/javafx-sdk-13.0.1/lib --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex4javafx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FX2Bounce" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex4javafx.FX2Bounce" />
+      <module name="lectweek3" />
+      <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/devel/java/javafx-sdk-13.0.1/lib --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex4javafx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FX3Collisions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex4javafx.FX3Collisions" />
+      <module name="lectweek3" />
+      <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/devel/java/javafx-sdk-13.0.1/lib --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex4javafx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="M6Recursion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex2methods.M6Recursion" />
+      <module name="lectweek3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex2methods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SS1Values" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex3supersub.SS1Values" />
+      <module name="lectweek3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex3supersub.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.FX1Animation" />
+      <item itemvalue="Application.FX2Bounce" />
+      <item itemvalue="Application.FX3Collisions" />
+      <item itemvalue="Application.M6Recursion" />
+      <item itemvalue="Application.SS1Values" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FX3Collisions" />
+        <item itemvalue="Application.FX2Bounce" />
+        <item itemvalue="Application.SS1Values" />
+        <item itemvalue="Application.M6Recursion" />
+        <item itemvalue="Application.FX1Animation" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02744097-95e1-49a4-9a89-5401abdf6631" name="Default Changelist" comment="" />
+      <created>1576564720663</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576564720663</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="771" y="302" width="319" height="410" key="FileChooserDialogImpl" timestamp="1643611689405">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="771" y="302" width="426" height="480" key="FileChooserDialogImpl/0.0.1920.1200/1920.0.1280.1024@0.0.1920.1200" timestamp="1643611689405" />
+    <state x="925" y="324" width="319" height="410" key="FileChooserDialogImpl/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1643354559144" />
+    <state width="1201" height="180" key="GridCell.Tab.0.bottom" timestamp="1639739344907">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1201" height="180" key="GridCell.Tab.0.bottom/0.0.1920.1200/1920.0.1280.1024@0.0.1920.1200" timestamp="1639739344907" />
+    <state width="1266" height="138" key="GridCell.Tab.0.bottom/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1637230806077" />
+    <state width="1201" height="180" key="GridCell.Tab.0.center" timestamp="1639739344907">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1201" height="180" key="GridCell.Tab.0.center/0.0.1920.1200/1920.0.1280.1024@0.0.1920.1200" timestamp="1639739344907" />
+    <state width="1266" height="138" key="GridCell.Tab.0.center/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1637230806076" />
+    <state width="1201" height="180" key="GridCell.Tab.0.left" timestamp="1639739344907">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1201" height="180" key="GridCell.Tab.0.left/0.0.1920.1200/1920.0.1280.1024@0.0.1920.1200" timestamp="1639739344907" />
+    <state width="1266" height="138" key="GridCell.Tab.0.left/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1637230806076" />
+    <state width="1201" height="180" key="GridCell.Tab.0.right" timestamp="1639739344907">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1201" height="180" key="GridCell.Tab.0.right/0.0.1920.1200/1920.0.1280.1024@0.0.1920.1200" timestamp="1639739344907" />
+    <state width="1266" height="138" key="GridCell.Tab.0.right/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1637230806076" />
+  </component>
+</project>

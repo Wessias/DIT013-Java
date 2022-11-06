@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="467705c1-e8e3-4b7b-a31f-2de9ba5ac799" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="1V4iJsQ5Q51IFnkynAKlcmG9mov" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "D:/Program (x86)/GitHub/DIT013-Java/lectweek1"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ex1basics" />
+      <recent name="ex5classes" />
+      <recent name="ex3arraysfor" />
+      <recent name="unused" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ex2ifwhile" />
+      <recent name="$PROJECT_DIR$/src/ex1basics" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.AF6AritmSeries">
+    <configuration name="AF1Arrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex3arraysfor.AF1Arrays" />
+      <module name="lectweek1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex3arraysfor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AF6AritmSeries" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex3arraysfor.AF6AritmSeries" />
+      <module name="lectweek1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex3arraysfor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C2Constructor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex5classes.C2Constructor" />
+      <module name="lectweek1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex5classes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IW7NumberGuess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex2ifwhile.IW7NumberGuess" />
+      <module name="lectweek1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex2ifwhile.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="M3BullsAndCows" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex4methods.M3BullsAndCows" />
+      <module name="lectweek1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex4methods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AF6AritmSeries" />
+        <item itemvalue="Application.M3BullsAndCows" />
+        <item itemvalue="Application.IW7NumberGuess" />
+        <item itemvalue="Application.C2Constructor" />
+        <item itemvalue="Application.AF1Arrays" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="467705c1-e8e3-4b7b-a31f-2de9ba5ac799" name="Default Changelist" comment="" />
+      <created>1576518698655</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576518698655</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="763" y="368" width="509" height="385" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1636282480351">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="763" y="368" width="509" height="385" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1200/1920.0.1280.1024@0.0.1920.1200" timestamp="1636282480351" />
+    <state x="2202" y="252" width="319" height="410" key="FileChooserDialogImpl" timestamp="1642665457089">
+      <screen x="1920" y="0" width="1280" height="1024" />
+    </state>
+    <state x="423" y="295" width="426" height="480" key="FileChooserDialogImpl/0.0.1920.1200/1920.0.1280.1024@0.0.1920.1200" timestamp="1639985728888" />
+    <state x="2202" y="252" width="319" height="410" key="FileChooserDialogImpl/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1642665457089" />
+  </component>
+</project>
