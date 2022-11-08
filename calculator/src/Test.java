@@ -23,17 +23,17 @@ class Test {
         // Uncomment line by line to test
 
         // Tokenization ---------------------------
-        /*t("1 + 10", "1 + 10");  // Arguments are input and expected output
+        t("1 + 10", "1 + 10");  // Arguments are input and expected output
         t("1+ 10", "1 + 10");   // Expected is in fact a list [ "1", "+", "10"]
         t("1 +10", "1 + 10");
         t("1+10", "1 + 10");
         t("(1+10) ", "( 1 + 10 )");  // List is [ "(", "1", "+", "10", ")" ]
         t("2 *( 1+10) ", "2 * ( 1 + 10 )");
         t("(1 +2) /2 *( 1+10) ", "( 1 + 2 ) / 2 * ( 1 + 10 )");
-        */
+
 
         // Infix to postfix -----------------------
-        /*i2p("1+10", "1 10 +");
+        i2p("1+10", "1 10 +");
         i2p("1+2+3", "1 2 + 3 +");
         i2p("1+2-3", "1 2 + 3 -");
         i2p("3-2-1", "3 2 - 1 -");
@@ -44,10 +44,11 @@ class Test {
         i2p("4^3*2", "4 3 ^ 2 *");
         i2p("(1+2)*3", "1 2 + 3 *");
         i2p("2^(1+1)", "2 1 1 + ^");
-        */
+
+
         // Evaluation ------------------------------
         // A value
-        /*e("123", 123);
+        e("123", 123);
 
         // Basic operations
         e("1 + 10", 11);
@@ -88,7 +89,7 @@ class Test {
         // Mix priority and right and left associativity
         e(" 1 ^ 1 ^ 1 ^ 1  - 1", 0);
         e(" 4 - 2 - 1 ^ 2 ", 1);
-        */
+
         // Exceptions -----------------------------------
         try {
            // e("1 / 0 ", 0);   // 0 just a dummy
@@ -125,10 +126,6 @@ class Test {
     void t(String expr, String expected) {
         List<String> list = calculator.tokenize(expr);
         String result = String.join(" ", list);
-        for (String letter:
-             list) {
-            out.print(letter);
-        }
         out.println(result.equals(expected));
     }
 

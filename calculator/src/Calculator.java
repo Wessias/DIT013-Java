@@ -39,7 +39,18 @@ public class Calculator {
 
     double evalPostfix(List<String> postfix) {
         // TODO
-        return 0;
+        Stack<String> stack = new Stack<>();
+
+        for (String tok : postfix) {
+            if (OPERATORS.contains(tok)) {
+                double newVal = applyOperator(tok, Double.parseDouble(stack.pop()), Double.parseDouble(stack.pop()));
+                stack.push("" + newVal);
+            } else {
+                stack.push(tok);
+            }
+        }
+
+        return Double.parseDouble(stack.pop());
     }
 
     double applyOperator(String op, double d1, double d2) {
@@ -65,41 +76,45 @@ public class Calculator {
 
     List<String> infix2Postfix(List<String> infix) {
         // TODO
-        String num = "0123456789";
         Stack<String> stack = new Stack<String>();
         List<String> output = new ArrayList<String>();
 
 
-        for (String tok :
-                infix) {
-            if (num.contains(tok)) {
-                output.add(tok);
-            } else if (OPERATORS.contains(tok)) {
-                if (stack.size() == 0) {
-                    stack.add(tok);
-                } else {
-                    if (true) { //condition should be as below
-                        //While stack not empty and stack top != "(" and getPrecedence(tok) <= getPrecedence(stack top) and getAssoc(tok) = 0 (LEFT):
-                        //do output.add(stack top)
-
-                    }
-                    stack.push(tok);
-
-                }
-            } else if (tok.equals(")")) { //tok is ")"
+        for (String tok : infix) {
+            if (tok.equals(")")) { //tok is ")"
                 //Pop out and add to output til "(" found and pop out "("
+                while (!stack.peek().equals("(")) {
+                    output.add(stack.pop());
+                }
+                stack.pop(); //Remove "("
 
-            } else { // tok is "("
+            } else if (tok.equals("(")) { // tok is "("
                 stack.push(tok);
+            } else if (!OPERATORS.contains(tok)) {
+                output.add(tok);
+            } else {
+                while (!stack.isEmpty()
+                        && !stack.peek().equals("(")
+                        && getPrecedence(tok) <= getPrecedence(stack.peek())
+                        && getAssociativity(tok).ordinal() == 0) {
+                    output.add(stack.pop());
+                }
+                stack.push(tok); //Push new op
+                //condition should be as below
+                //!stack.isEmpty() && !stack.peek().equals("(") && getPrecedence(tok) <= getPrecedence(stack.peek()) && getAssociativity(tok).ordinal() == 0
+                //While stack not empty and stack top != "(" and getPrecedence(tok) <= getPrecedence(stack top)
+                // and getAssoc(tok) = 0 (LEFT):
+                //do output.add(stack top)
+
+
             }
 
         }
+
         //POP OUT ALL OPERATORS FROM STACK AND PUT IN POSTFIX LIST
-        for (int j = 0; j < stack.size(); j++) {
+        while(!stack.isEmpty()){
             output.add(stack.pop());
         }
-
-
         return output;
     }
 
@@ -127,8 +142,7 @@ public class Calculator {
     }
 
     enum Assoc {
-        LEFT,
-        RIGHT
+        LEFT, RIGHT
     }
 
     // ---------- Tokenize -----------------------
