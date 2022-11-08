@@ -92,12 +92,12 @@ class Test {
 
         // Exceptions -----------------------------------
         try {
-           // e("1 / 0 ", 0);   // 0 just a dummy
+            //e("1 / 0 ", 0);   // 0 just a dummy
         } catch (IllegalArgumentException e) {
             out.println(e.getMessage().equals(Calculator.DIV_BY_ZERO));
         }
         try {
-           // e("1 + 2 + ", 0);
+            //e("1 + 2 + ", 0);
         } catch (IllegalArgumentException e) {
             out.println(e.getMessage().equals(Calculator.MISSING_OPERAND));
         }
@@ -107,7 +107,7 @@ class Test {
             out.println(e.getMessage().equals(Calculator.MISSING_OPERATOR));
         }
         try {
-            // e("1 + 2)", 0);
+             //e("1 + 2)", 0);
         } catch (IllegalArgumentException e) {
             out.println(e.getMessage().equals(Calculator.MISSING_OPERATOR));
         }

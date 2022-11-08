@@ -99,14 +99,7 @@ public class Calculator {
                         && getAssociativity(tok).ordinal() == 0) {
                     output.add(stack.pop());
                 }
-                stack.push(tok); //Push new op
-                //condition should be as below
-                //!stack.isEmpty() && !stack.peek().equals("(") && getPrecedence(tok) <= getPrecedence(stack.peek()) && getAssociativity(tok).ordinal() == 0
-                //While stack not empty and stack top != "(" and getPrecedence(tok) <= getPrecedence(stack top)
-                // and getAssoc(tok) = 0 (LEFT):
-                //do output.add(stack top)
-
-
+                stack.push(tok);
             }
 
         }
@@ -152,7 +145,7 @@ public class Calculator {
         // TODO
         List<String> tokens = new ArrayList<String>();
         String op = OPERATORS + "()";
-        String num = "0123456789";
+        String num = "0123456789.";
         String tok = "";
 
         for (int i = 0; i < expr.length(); i++) {
