@@ -103,7 +103,7 @@ public class Neighbours extends Application {
         // %-distribution of RED, BLUE and NONE
         double[] dist = {0.25, 0.25, 0.5};
         // Number of locations (places) in world (must be a square)
-        int nLocations = 900;   // Should also try 90 000
+        int nLocations = 90000;   // Should also try 90 000
 
         // TODO
         world = new Actor[(int) sqrt(nLocations)][(int) sqrt(nLocations)];
