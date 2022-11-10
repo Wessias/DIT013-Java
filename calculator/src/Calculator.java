@@ -43,6 +43,7 @@ public class Calculator {
 
         for (String tok : postfix) {
             if (OPERATORS.contains(tok)) {
+                //Take top 2 from stack and apply operator to them.
                 double newVal = applyOperator(tok, Double.parseDouble(stack.pop()), Double.parseDouble(stack.pop()));
                 stack.push("" + newVal);
             } else {
@@ -83,7 +84,7 @@ public class Calculator {
         for (String tok : infix) {
             if (tok.equals(")")) { //tok is ")"
                 //Pop out and add to output til "(" found and pop out "("
-                popTilParenthesIsClosed(output, stack);
+                popTilParenthesisCloses(output, stack);
                 stack.pop(); //Remove "("
 
             } else if (tok.equals("(")) { // tok is "("
@@ -96,14 +97,14 @@ public class Calculator {
             }
 
         }
-        //POP OUT ALL OPERATORS FROM STACK AND PUT IN POSTFIX LIST
+        //POP OUT ALL OPERATORS FROM STACK AND PUT IN OUTPUT
         while(!stack.isEmpty()){
             output.add(stack.pop());
         }
         return output;
     }
 
-    void popTilParenthesIsClosed(List<String> output, Stack<String> stack){
+    void popTilParenthesisCloses(List<String> output, Stack<String> stack){
         while (!stack.peek().equals("(")) {
             output.add(stack.pop());
         }
