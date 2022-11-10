@@ -83,9 +83,7 @@ public class Calculator {
         for (String tok : infix) {
             if (tok.equals(")")) { //tok is ")"
                 //Pop out and add to output til "(" found and pop out "("
-                while (!stack.peek().equals("(")) {
-                    output.add(stack.pop());
-                }
+                popTilParenthesIsClosed(output, stack);
                 stack.pop(); //Remove "("
 
             } else if (tok.equals("(")) { // tok is "("
@@ -93,22 +91,32 @@ public class Calculator {
             } else if (!OPERATORS.contains(tok)) {
                 output.add(tok);
             } else {
-                while (!stack.isEmpty()
-                        && !stack.peek().equals("(")
-                        && getPrecedence(tok) <= getPrecedence(stack.peek())
-                        && getAssociativity(tok).ordinal() == 0) {
-                    output.add(stack.pop());
-                }
+                popHigherPrecedenceToOutput(output, stack, tok);
                 stack.push(tok);
             }
 
         }
-
         //POP OUT ALL OPERATORS FROM STACK AND PUT IN POSTFIX LIST
         while(!stack.isEmpty()){
             output.add(stack.pop());
         }
         return output;
+    }
+
+    void popTilParenthesIsClosed(List<String> output, Stack<String> stack){
+        while (!stack.peek().equals("(")) {
+            output.add(stack.pop());
+        }
+    }
+
+
+    void popHigherPrecedenceToOutput(List<String> output, Stack<String> stack, String tok){
+        while (!stack.isEmpty()
+                && !stack.peek().equals("(")
+                && getPrecedence(tok) <= getPrecedence(stack.peek())
+                && getAssociativity(tok).ordinal() == 0) {
+            output.add(stack.pop());
+        }
     }
 
 
