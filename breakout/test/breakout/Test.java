@@ -2,6 +2,7 @@ package breakout;
 
 import breakout.model.Ball;
 import breakout.model.Brick;
+import breakout.model.Wall;
 
 import static java.lang.System.out;
 
@@ -18,7 +19,10 @@ public class Test {
 
     void test() {
 
-        //Ball b = new Ball(4,5 ); // Create object (just an example)
+        Ball b = new Ball(4,5 ); // Create object (just an example)
+        out.println(b.getX());
+        b.move();
+        out.println(b.getX());
 
         //Brick br = new Brick(4, 5 );
         //b.hit(br) == true;

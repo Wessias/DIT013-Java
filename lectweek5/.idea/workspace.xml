@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2e52c1f-5f7c-4aed-ab52-514a8f4b7894" name="Default Changelist" comment="" />
+    <list default="true" id="b2e52c1f-5f7c-4aed-ab52-514a8f4b7894" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../calculator/out/production/calculator/Calculator$Assoc.class" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/out/production/calculator/Calculator$Assoc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/out/production/calculator/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/out/production/calculator/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lectweek6/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lectweek6/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lectweek6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lectweek6/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1VAD2LMhCP5KSgr0YxnX9FgqKKM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -16,17 +29,15 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lectweek6" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Program (x86)/GitHub/DIT013-Java/lectweek5"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/files" />
@@ -47,7 +58,7 @@
       <recent name="$PROJECT_DIR$/resources/files" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.C1InheritObject">
+  <component name="RunManager" selected="Application.PolyLineGUI">
     <configuration name="C1InheritObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ex1classes.C1InheritObject" />
       <module name="lectweek5" />
@@ -61,23 +72,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KamaSutra" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ex5filehandling.f2crypto.KamaSutra" />
-      <module name="lectweek5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ex5filehandling.f2crypto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PolyLineGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ex2oomodels.oo3polyline.PolyLineGUI" />
       <module name="lectweek5" />
-      <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/devel/java/javafx-sdk-13.0.1/lib --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media " />
+      <option name="VM_PARAMETERS" value="--module-path $PATH_TO_FX$ --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ex2oomodels.oo3polyline.*" />
@@ -115,20 +113,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestComplex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ex1classes.c3complex.TestComplex" />
+      <module name="lectweek5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ex1classes.c3complex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.TestComplex" />
       <item itemvalue="Application.C1InheritObject" />
-      <item itemvalue="Application.KamaSutra" />
       <item itemvalue="Application.PolyLineGUI" />
       <item itemvalue="Application.S1Basics" />
       <item itemvalue="Application.S8MainMethod" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PolyLineGUI" />
+        <item itemvalue="Application.TestComplex" />
         <item itemvalue="Application.C1InheritObject" />
         <item itemvalue="Application.S1Basics" />
         <item itemvalue="Application.S8MainMethod" />
-        <item itemvalue="Application.PolyLineGUI" />
-        <item itemvalue="Application.KamaSutra" />
       </list>
     </recent_temporary>
   </component>
@@ -144,6 +155,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -156,33 +168,6 @@
       <updated>1576686797385</updated>
     </task>
     <servers />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="2084" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638256980465">
-      <screen x="1920" y="0" width="1280" height="1024" />
-    </state>
-    <state x="2084" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1638256980465" />
-    <state x="2434" y="258" width="319" height="410" key="FileChooserDialogImpl" timestamp="1645514624862">
-      <screen x="1920" y="0" width="1280" height="1024" />
-    </state>
-    <state x="771" y="302" width="426" height="480" key="FileChooserDialogImpl/0.0.1920.1200/1920.0.1280.1024@0.0.1920.1200" timestamp="1639737658955" />
-    <state x="2434" y="258" width="319" height="410" key="FileChooserDialogImpl/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1645514624862" />
-    <state width="1106" height="231" key="GridCell.Tab.0.bottom" timestamp="1644834708881">
-      <screen x="1920" y="0" width="1280" height="1024" />
-    </state>
-    <state width="1106" height="231" key="GridCell.Tab.0.bottom/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1644834708881" />
-    <state width="1106" height="231" key="GridCell.Tab.0.center" timestamp="1644834708881">
-      <screen x="1920" y="0" width="1280" height="1024" />
-    </state>
-    <state width="1106" height="231" key="GridCell.Tab.0.center/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1644834708881" />
-    <state width="1106" height="231" key="GridCell.Tab.0.left" timestamp="1644834708881">
-      <screen x="1920" y="0" width="1280" height="1024" />
-    </state>
-    <state width="1106" height="231" key="GridCell.Tab.0.left/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1644834708881" />
-    <state width="1106" height="231" key="GridCell.Tab.0.right" timestamp="1644834708881">
-      <screen x="1920" y="0" width="1280" height="1024" />
-    </state>
-    <state width="1106" height="231" key="GridCell.Tab.0.right/0.0.1920.1200/1920.0.1280.1024@1920.0.1280.1024" timestamp="1644834708881" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

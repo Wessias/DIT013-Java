@@ -52,13 +52,14 @@ public class BreakoutGUI extends Application implements IEventHandler {
         }
         KeyCode kc = event.getCode();
         switch (kc) {
-            case LEFT:
+            case A, LEFT ->
                 // TODO
-                break;
-            case RIGHT:
+                    breakout.paddleMoving(true, true);
+            case D, RIGHT ->
                 // TODO
-                break;
-            default:  // Nothing
+                    breakout.paddleMoving(true, false);
+            default -> {
+            }  // Nothing
         }
     }
 
@@ -67,12 +68,12 @@ public class BreakoutGUI extends Application implements IEventHandler {
             return;
         }
         KeyCode kc = event.getCode();
-        switch (kc) {
-            case LEFT:        // No break, fall through
-            case RIGHT:
+        switch (kc) {        // No break, fall through
+            case LEFT, RIGHT, A, D ->
                 // TODO
-                break;
-            default: // Nothing
+                    breakout.paddleMoving(false, false);
+            default -> {
+            } // Nothing
         }
     }
 
@@ -85,10 +86,21 @@ public class BreakoutGUI extends Application implements IEventHandler {
 
         // --- Build the model -----
         // TODO Build the model (also: see methods below)
+        Ball b1 = new Ball(200, 200);
+        List<Wall> testWalls = new ArrayList<>(getWalls());
+        Paddle p = new Paddle(200, 300 );
+        List<Brick> bricks = getBricks(6, 16);
+
+
+
+
+        breakout = new Breakout(b1, testWalls, p, bricks);
+
+
 
 
         // Bind bricks to images
-        //bindBricks(bricks);  // TODO
+        bindBricks(bricks);  // TODO
 
         // Start game
         timer.start();
@@ -106,9 +118,9 @@ public class BreakoutGUI extends Application implements IEventHandler {
 
     // Create all walls
     private List<Wall> getWalls() {
-        Wall left = null;             // TODO
-        Wall top = null;               //TODO
-        Wall right = null;             //TODO
+        Wall left = new Wall(0, 0, Wall.Dir.VERTICAL);             // TODO
+        Wall top = new Wall(0,0, Wall.Dir.HORIZONTAL);               //TODO
+        Wall right = new Wall(GAME_WIDTH - 15, 0, Wall.Dir.VERTICAL);             //TODO
         return Arrays.asList(left, top, right);
     }
 
@@ -121,7 +133,7 @@ public class BreakoutGUI extends Application implements IEventHandler {
         int points = 300;
         for (int y = 10 * offset; y < nRows * (bh + offset); y += bh + offset) {
             for (int x = offset - 2; x < nCols * (bw + offset); x += bw + offset) {
-                Brick b = null;     // TODO
+                Brick b = new Brick(x, y, points);     // TODO
                 bricks.add(b);
             }
             points -= 100;
@@ -131,8 +143,8 @@ public class BreakoutGUI extends Application implements IEventHandler {
 
     // Bind bricks to images
     private void bindBricks(List<Brick> bricks) {   // TODO
-        /*for (Brick b : bricks) {
-            switch ( ... ) {
+        for (Brick b : bricks) {
+            switch ( (int)b.getWorth() ) {
                 case 100:
                     assets.bind(b, assets.greenTile);
                     break;
@@ -145,7 +157,7 @@ public class BreakoutGUI extends Application implements IEventHandler {
                 default:
                     ;   // Nothing
             }
-        }*/
+        }
     }
 
     // -------- Event handling (events sent from model to GUI) -----------
