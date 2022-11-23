@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ed2bea5-1e18-426c-9250-8efa1ff63667" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/neighbours/Neighbours$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/neighbours/Neighbours$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../breakout/assets/sound/CBandiSound.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Ball.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Breakout.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Breakout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Sprite.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Sprite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/view/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/view/Assets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/view/BreakoutGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/view/BreakoutGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/view/BreakoutGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/view/BreakoutGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/out/test/breakout/breakout/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/test/breakout/breakout/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/src/breakout/model/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/src/breakout/model/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/src/breakout/model/Breakout.java" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/src/breakout/model/Breakout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/src/breakout/model/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/src/breakout/model/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/src/breakout/view/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/src/breakout/view/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/src/breakout/view/BreakoutGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/src/breakout/view/BreakoutGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/neighbours/Neighbours.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/neighbours/Neighbours.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Neighbours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Neighbours.java" afterDir="false" />
     </list>

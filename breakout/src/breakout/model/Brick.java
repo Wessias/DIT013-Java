@@ -9,7 +9,7 @@ public class Brick extends Sprite implements IPositionable {
     public static final double BRICK_WIDTH = 20;  // Default values, use in constructors, not directly
     public static final double BRICK_HEIGHT = 10;
 
-    double worth;
+    private final double worth;
 
     public Brick(double x, double y, double worth) {
         super(x, y);
@@ -20,22 +20,6 @@ public class Brick extends Sprite implements IPositionable {
 
     public double getWorth(){
         return worth;
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public double getHeight() {
-        return height;
     }
 }
 

@@ -170,7 +170,7 @@ public class Neighbours extends Application {
         //System.out.println(totActor);
         //System.out.println(sameColor / totActor);
 
-        return totActor == 0 ? false : ((sameColor / totActor) >= threshold);
+        return totActor != 0 && ((sameColor / totActor) >= threshold);
 
     }
 

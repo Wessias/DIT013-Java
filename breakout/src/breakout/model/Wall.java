@@ -15,17 +15,6 @@ public class Wall extends Sprite implements IPositionable{
 
     }
 
-
-    @Override
-    public double getX() {
-        return x;
-    }
-
-    @Override
-    public double getY() {
-        return y;
-    }
-
     @Override
     public double getWidth() {
         if (direction == Dir.HORIZONTAL){

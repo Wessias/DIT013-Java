@@ -99,6 +99,7 @@ public class BreakoutGUI extends Application implements IEventHandler {
 
 
 
+
         // Bind bricks to images
         bindBricks(bricks);  // TODO
 
@@ -166,8 +167,10 @@ public class BreakoutGUI extends Application implements IEventHandler {
     public void onModelEvent(ModelEvent evt) {
         if (evt.type == ModelEvent.Type.BALL_HIT_PADDLE) {
            // TODO Play a sound
+            assets.ballHitPaddle.play();
         } else if (evt.type == ModelEvent.Type.BALL_HIT_BRICK) {
             // TODO Play a sound
+            assets.ballHitBrick.play();
         }
     }
 

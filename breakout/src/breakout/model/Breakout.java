@@ -1,6 +1,9 @@
 package breakout.model;
 
 
+import breakout.event.EventBus;
+import breakout.event.ModelEvent;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,6 +53,7 @@ public class Breakout {
         // TODO  Main game loop, start functional decomposition from
 
 
+
         updateBallPos((Ball) objects.get(0));
 
         //WALL COLLISION FOR BALL
@@ -68,32 +72,36 @@ public class Breakout {
             }
         }
         if (ball.isHit(paddle)[0]) {
-            ball.setDy(-1 * ball.getDy());
+            ball.setDy(-1.1 * ball.getDy());
+            EventBus.INSTANCE.publish(new ModelEvent(ModelEvent.Type.BALL_HIT_PADDLE, "data"));
         }
 
 
         for (Brick brick :
                 bricks) {
             boolean[] isHitOnTop = ball.isHit(brick);
-            if (now > timeForLastHit + 250) {
+            if (now > timeForLastHit + 1000) {
                 if (isHitOnTop[0]) {
                     timeForLastHit = now;
                     playerPoints += brick.getWorth();
                     bricks.remove(brick);
                     objects.remove(brick);
+                    EventBus.INSTANCE.publish(new ModelEvent(ModelEvent.Type.BALL_HIT_BRICK, "data"));
                     if (isHitOnTop[1]) {
-                        ball.setDy(-1.1 * ball.getDy());
+                        ball.setDy(-1 * ball.getDy());
                     } else {
-                        ball.setDx(-1.1 * ball.getDx());
+                        ball.setDx(-1 * ball.getDx());
                     }
 
                 }
             }
         }
 
+
+
         //Check if ball leaves screen
         if (!isOnScreen(ball)) {
-            if (nBalls != -1) {
+            if (nBalls > 0 ) {
                 createNewBall();
                 //Update reference. Could use a for loop to find the ball but w/e keep it at index 0.
                 objects.set(0, ball);
@@ -116,6 +124,9 @@ public class Breakout {
         if (playerPoints == 9600) {
             //end?
         }
+
+
+
 
 
     }

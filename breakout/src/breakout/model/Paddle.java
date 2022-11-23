@@ -36,43 +36,4 @@ public class Paddle extends Sprite implements IPositionable, IMovable{
         this.moveLeft = moveLeft;
     }
 
-    @Override
-    public void setDx(double dx) {
-        this.dx = dx;
-    }
-
-    @Override
-    public void setDy(double dy) {
-        this.dy = dy;
-    }
-
-    @Override
-    public double getDy() {
-        return dy;
-    }
-
-    @Override
-    public double getDx() {
-        return dx;
-    }
-
-    @Override
-    public double getX() {
-        return x;
-    }
-
-    @Override
-    public double getY() {
-        return y;
-    }
-
-    @Override
-    public double getWidth() {
-        return width;
-    }
-
-    @Override
-    public double getHeight() {
-        return height;
-    }
 }

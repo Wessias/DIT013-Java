@@ -8,12 +8,12 @@ import java.util.Random;
 
 
 public class Ball extends Sprite implements IPositionable, IMovable {
-    private final double radius = 7.5;
 
 
     public Ball(double x, double y) {
         super(x,y);
 
+        double radius = 7.5;
         width = 2 * radius;
         height = width;
 
@@ -43,45 +43,5 @@ public class Ball extends Sprite implements IPositionable, IMovable {
         x += dx;
         y += dy;
     }
-    @Override
-    public double getDx() {
-        return dx;
-    }
 
-    @Override
-    public void setDx(double dx) {
-        this.dx = dx;
-    }
-
-
-    @Override
-    public double getDy() {
-        return dy;
-    }
-
-    @Override
-    public void setDy(double dy) {
-        this.dy = dy;
-    }
-
-
-    @Override
-    public double getX() {
-        return x;
-    }
-
-    @Override
-    public double getY() {
-        return y;
-    }
-
-    @Override
-    public double getWidth() {
-        return width;
-    }
-
-    @Override
-    public double getHeight() {
-        return height;
-    }
 }
