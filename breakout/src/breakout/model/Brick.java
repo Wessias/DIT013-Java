@@ -12,9 +12,7 @@ public class Brick extends Sprite implements IPositionable {
     private final double worth;
 
     public Brick(double x, double y, double worth) {
-        super(x, y);
-        width = BRICK_WIDTH;
-        height = BRICK_HEIGHT;
+        super(x, y, BRICK_WIDTH, BRICK_HEIGHT);
         this.worth = worth;
     }
 

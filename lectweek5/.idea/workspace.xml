@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2e52c1f-5f7c-4aed-ab52-514a8f4b7894" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../calculator/out/production/calculator/Calculator$Assoc.class" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/out/production/calculator/Calculator$Assoc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/out/production/calculator/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/out/production/calculator/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Brick.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Brick.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Paddle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Paddle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Wall$Dir.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Wall$Dir.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Wall.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Wall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lectweek4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lectweek4/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lectweek6/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lectweek6/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lectweek6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lectweek6/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +31,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Program (x86)/GitHub/DIT013-Java/lectweek5"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Program (x86)/GitHub/DIT013-Java/lectweek5&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/files" />

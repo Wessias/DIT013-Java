@@ -5,20 +5,18 @@ package breakout.model;
  */
 public class Wall extends Sprite implements IPositionable{
 
-    Dir direction;
+    private final Dir direction;
 
     public Wall(double x, double y, Dir dir){
-        super(x,y);
+        super(x,y, 400, 400);
         direction = dir;
-        height = 400;
-        width = 400;
 
     }
 
     @Override
     public double getWidth() {
         if (direction == Dir.HORIZONTAL){
-            return width;
+            return super.getWidth();
         }
         else{
             return 1;
@@ -28,7 +26,7 @@ public class Wall extends Sprite implements IPositionable{
     @Override
     public double getHeight() {
         if (direction == Dir.VERTICAL){
-            return height;
+            return super.getHeight();
         }
         else {
             return 1;

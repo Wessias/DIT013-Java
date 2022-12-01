@@ -59,7 +59,7 @@ public class Breakout {
         //WALL COLLISION FOR BALL
         //1. Get position of ball
         //2. Check if position collides with anything
-        //3. IF COLLIDES SEND THAT BITCH FLYING, IF UPPER WALL dy -> -dy, IF SIDES dx -> -dx
+        //3. IF COLLIDES SEND IT FLYING, IF UPPER WALL dy -> -dy, IF SIDES dx -> -dx
         for (Wall wall :
                 walls) {
             boolean[] isHitOnTop = ball.isHit(wall);
@@ -80,7 +80,7 @@ public class Breakout {
         for (Brick brick :
                 bricks) {
             boolean[] isHitOnTop = ball.isHit(brick);
-            if (now > timeForLastHit + 1000) {
+            if (now > timeForLastHit + 100000) {
                 if (isHitOnTop[0]) {
                     timeForLastHit = now;
                     playerPoints += brick.getWorth();
@@ -92,6 +92,7 @@ public class Breakout {
                     } else {
                         ball.setDx(-1 * ball.getDx());
                     }
+                    break;
 
                 }
             }

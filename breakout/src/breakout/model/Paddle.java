@@ -12,22 +12,19 @@ public class Paddle extends Sprite implements IPositionable, IMovable{
     public static final double PADDLE_WIDTH = 60;  // Default values, use in constructors, not directly
     public static final double PADDLE_HEIGHT = 10;
     public static final double PADDLE_SPEED = 5;
-    boolean moveLeft;
+    private boolean moveLeft;
 
     public Paddle(double x, double y) {
-        super(x, y);
-        height = PADDLE_HEIGHT;
-        width = PADDLE_WIDTH;
-        dx = PADDLE_SPEED;
+        super(x, y, PADDLE_WIDTH, PADDLE_HEIGHT, PADDLE_SPEED, 0);
     }
 
 
     @Override
     public void move() {
-        if(moveLeft && x >= 0){
-            x -= dx;
-        } else if (x <= 400 - width) {
-            x += dx;
+        if(moveLeft && getX() >= 0){
+            setX(getX() - getDx());
+        } else if (getX() <= 400 - getWidth()) {
+            setX(getX() + getDx());
         }
 
     }

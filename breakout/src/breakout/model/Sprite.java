@@ -1,18 +1,31 @@
 package breakout.model;
 
 public abstract class Sprite {
-    double width;
-    double height;
+    private double width;
+    private double height;
 
-    double x;
-    double y;
+    private double x;
+    private double y;
 
-    double dx;
-    double dy;
+    private double dx;
+    private double dy;
 
-    public Sprite(double x, double y) {
+    public Sprite(double x, double y, double width, double height) {
         this.x = x;
         this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+
+
+
+    public Sprite(double x, double y, double width, double height, double dx, double dy) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.dx = dx;
+        this.dy = dy;
     }
 
     public void setDx(double dx) {
@@ -21,6 +34,14 @@ public abstract class Sprite {
 
     public void setDy(double dy) {
         this.dy = dy;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
     }
 
     public double getDx() {
