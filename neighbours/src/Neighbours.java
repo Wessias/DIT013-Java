@@ -45,52 +45,23 @@ public class Neighbours extends Application {
     void updateWorld() {
         // % of surrounding neighbours that are like me
         double threshold = 0.7;
-        //List of null index, [[row, col]]
+
+        //List of null index, [[row, col], ...]
         int[][] nullCords = new int[world.length * world.length][2];
-        int nullFound = 0;
+
         //List of dissatisfied index, [[row, col], ... ]
         int[][] dissatisfiedCords = new int[world.length * world.length][2];
-        int dissatisfiedFound = 0;
-
 
         // TODO
         // 1 Loop to find dissatisfied and nulls.
-
-        for (int i = 0; i < world.length; i++) {
-            for (int j = 0; j < world.length; j++) {
-                //CHECK TYPE OF ACTOR (null or color), and save dissatisfied and null pos
-                if (world[i][j] == null) {
-                    int[] nullPos = {i, j};
-                    nullCords[nullFound] = nullPos;
-                    nullFound++;
-                } else if (!isSatisfied(world, threshold, i, j)) {
-                    int[] disPos = {i, j};
-                    dissatisfiedCords[dissatisfiedFound] = disPos;
-                    dissatisfiedFound++;
-                }
-                else{
-                    world[i][j].isSatisfied = true;
-                }
-            }
-        }
-
+        int[] nullAndDissatisfiedFound = findNullAndDissatisfied(world, nullCords, dissatisfiedCords, threshold);
 
         //Shuffle nulls.
-        nullCords = shuffleFirstNIndexInArray(nullCords, nullFound);
+        nullCords = shuffleFirstNIndexInArray(nullCords, nullAndDissatisfiedFound[0]);
 
         //Swap nulls with dissatisfied.
-        for (int i = 0; i < dissatisfiedFound; i++) {
-            //nullFound should be constant so don't really need to check it every iteration.
-            if (i < nullFound) {
-                //method that swaps position of dissatisfied with nulls
-                world = swapDissatisfiedWithNull(world, dissatisfiedCords[i], nullCords[i]);
-            } else {
-                //Code gets here if there are more dissatisfied than null spots.
-                //So the last dissatisfied are left as they are for this update iteration.
-                break;
-            }
+        swapAllDissatisfiedCordsWithNullCords(world, nullCords, nullAndDissatisfiedFound[0], dissatisfiedCords, nullAndDissatisfiedFound[1]);
 
-        }
     }
 
     // This method initializes the world variable with a random distribution of Actors
@@ -103,7 +74,7 @@ public class Neighbours extends Application {
         // %-distribution of RED, BLUE and NONE
         double[] dist = {0.25, 0.25, 0.5};
         // Number of locations (places) in world (must be a square)
-        int nLocations = 90000;   // Should also try 90 000
+        int nLocations = 900;   // Should also try 90 000
 
         // TODO
         world = new Actor[(int) sqrt(nLocations)][(int) sqrt(nLocations)];
@@ -115,6 +86,49 @@ public class Neighbours extends Application {
     }
 
     // TODO Many methods here, break down of init() and updateWorld()
+
+
+    public void swapAllDissatisfiedCordsWithNullCords(Actor[][] world, int[][] nulls, int nullFound, int[][] dissatisfied, int dissatisfiedFound) {
+        for (int i = 0; i < dissatisfiedFound; i++) {
+            //nullFound should be constant so don't really need to check it every iteration.
+            if (i < nullFound) {
+                //method that swaps position of dissatisfied with nulls
+                swapDissatisfiedWithNull(world, dissatisfied[i], nulls[i]);
+            } else {
+                //Code gets here if there are more dissatisfied than null spots.
+                //So the last dissatisfied are left as they are for this update iteration.
+                break;
+            }
+
+        }
+
+    }
+
+
+    public int[] findNullAndDissatisfied(Actor[][] world, int[][] nulls, int[][] dissatisfied, double threshold) {
+        int nullFound = 0;
+        int dissatisfiedFound = 0;
+        for (int i = 0; i < world.length; i++) {
+            for (int j = 0; j < world.length; j++) {
+                //CHECK TYPE OF ACTOR (null or color), and save dissatisfied and null pos
+                if (world[i][j] == null) {
+                    int[] nullPos = {i, j};
+                    nulls[nullFound] = nullPos;
+                    nullFound++;
+                } else if (!isSatisfied(world, threshold, i, j)) {
+                    int[] disPos = {i, j};
+                    dissatisfied[dissatisfiedFound] = disPos;
+                    dissatisfiedFound++;
+                } else {
+                    world[i][j].isSatisfied = true;
+                }
+            }
+        }
+
+        return new int[]{nullFound, dissatisfiedFound};
+    }
+
+
     Actor[][] populateWorld(double[] dist, Actor[][] emptyWorld) {
         for (int i = 0; i < emptyWorld.length; i++) {
             for (int j = 0; j < emptyWorld.length; j++) {
@@ -189,13 +203,13 @@ public class Neighbours extends Application {
     }
 
     //Incredibly general methods are being used.
-    Actor[][] swapDissatisfiedWithNull(Actor[][] world, int[] dissatisfiedCords, int[] nullCords) {
+    void swapDissatisfiedWithNull(Actor[][] world, int[] dissatisfiedCords, int[] nullCords) {
         Color color = world[dissatisfiedCords[0]][dissatisfiedCords[1]].color;
 
         world[dissatisfiedCords[0]][dissatisfiedCords[1]] = null;
         world[nullCords[0]][nullCords[1]] = new Actor(color);
 
-        return world;
+
     }
 
 

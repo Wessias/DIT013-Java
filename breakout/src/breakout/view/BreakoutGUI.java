@@ -91,13 +91,7 @@ public class BreakoutGUI extends Application implements IEventHandler {
         Paddle p = new Paddle(200, 300 );
         List<Brick> bricks = getBricks(6, 16);
 
-
-
-
         breakout = new Breakout(b1, testWalls, p, bricks);
-
-
-
 
 
         // Bind bricks to images
@@ -121,7 +115,7 @@ public class BreakoutGUI extends Application implements IEventHandler {
     private List<Wall> getWalls() {
         Wall left = new Wall(0, 0, Wall.Dir.VERTICAL);             // TODO
         Wall top = new Wall(0,0, Wall.Dir.HORIZONTAL);               //TODO
-        Wall right = new Wall(GAME_WIDTH - 15, 0, Wall.Dir.VERTICAL);             //TODO
+        Wall right = new Wall(GAME_WIDTH, 0, Wall.Dir.VERTICAL);             //TODO
         return Arrays.asList(left, top, right);
     }
 

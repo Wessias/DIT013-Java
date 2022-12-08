@@ -33,6 +33,10 @@ public class Wall extends Sprite implements IPositionable{
         }
     }
 
+    public Dir getDirection(){
+        return direction;
+    }
+
     public enum Dir {
         HORIZONTAL, VERTICAL
     }

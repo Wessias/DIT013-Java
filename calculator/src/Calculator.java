@@ -44,8 +44,25 @@ public class Calculator {
         for (String tok : postfix) {
             if (OPERATORS.contains(tok)) {
                 //Take top 2 from stack and apply operator to them.
-                double newVal = applyOperator(tok, Double.parseDouble(stack.pop()), Double.parseDouble(stack.pop()));
-                stack.push("" + newVal);
+                double operand1;
+                double operand2;
+                if(!stack.isEmpty() && !OPERATORS.contains(stack.peek())){
+                    operand1 = Double.parseDouble(stack.pop());
+                }
+                else{
+                    throw new IllegalArgumentException(MISSING_OPERAND);
+                }
+                if (!stack.isEmpty() && !OPERATORS.contains(stack.peek())){
+                    operand2 = Double.parseDouble(stack.pop());
+                }
+                else {
+                    throw new IllegalArgumentException(MISSING_OPERAND);
+                }
+
+
+                    double newVal = applyOperator(tok, operand1, operand2);
+                    stack.push("" + newVal);
+
             } else {
                 stack.push(tok);
             }
@@ -99,6 +116,9 @@ public class Calculator {
         }
         //POP OUT ALL OPERATORS FROM STACK AND PUT IN OUTPUT
         while(!stack.isEmpty()){
+            if(stack.peek().equals("(")){
+                throw new IllegalArgumentException(MISSING_OPERATOR);
+            }
             output.add(stack.pop());
         }
         return output;
@@ -107,6 +127,9 @@ public class Calculator {
     void popTilParenthesisCloses(List<String> output, Stack<String> stack){
         while (!stack.peek().equals("(")) {
             output.add(stack.pop());
+            if(stack.isEmpty()){
+                throw new IllegalArgumentException(MISSING_OPERATOR);
+            }
         }
     }
 
@@ -175,6 +198,13 @@ public class Calculator {
 
             }
 
+        }
+
+        if(tokens.size() == 1){
+            String[] splitNum = expr.split(" ");
+            if(splitNum.length != 1){
+                throw new IllegalArgumentException(MISSING_OPERATOR);
+            }
         }
 
         return tokens;

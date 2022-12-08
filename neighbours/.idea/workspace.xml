@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ed2bea5-1e18-426c-9250-8efa1ff63667" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../breakout/assets/sound/CBandiSound.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Ball.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Breakout.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Breakout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Sprite.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/model/Sprite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/view/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/view/Assets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/view/BreakoutGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/view/BreakoutGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/view/BreakoutGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/production/breakout/breakout/view/BreakoutGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breakout/out/test/breakout/breakout/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/out/test/breakout/breakout/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breakout/src/breakout/model/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/src/breakout/model/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breakout/src/breakout/model/Breakout.java" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/src/breakout/model/Breakout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breakout/src/breakout/model/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/src/breakout/model/Sprite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breakout/src/breakout/view/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/src/breakout/view/Assets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breakout/src/breakout/view/BreakoutGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../breakout/src/breakout/view/BreakoutGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/neighbours/Neighbours.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/neighbours/Neighbours.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Neighbours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Neighbours.java" afterDir="false" />
     </list>
@@ -41,16 +29,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;D:/Program (x86)/GitHub/DIT013-Java/neighbours&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pathVariables&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "D:/Program (x86)/GitHub/DIT013-Java/calculator",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pathVariables"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />

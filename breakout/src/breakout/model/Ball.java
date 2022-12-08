@@ -20,18 +20,23 @@ public class Ball extends Sprite implements IPositionable, IMovable {
 
     //Returns [bool,bool] first is true if hit, second if hit is from top/bottom.
     //Ball should probably be able to tell if it hit something.
-    public boolean[] isHit(IPositionable object) {
-        boolean[] isHitOnTop = {false, true};
-        //!( over || under || right of || left of)
-        if (!(getY() >= object.getY() + object.getHeight() || getY() <= object.getY() || getX() <= object.getX() || getX() >= object.getX() + object.getWidth())) { //over || under || left || right
-            isHitOnTop[0] = true;
-            if ((Math.round(getX()) == object.getX() - getWidth() || Math.round(getX()) == object.getX() + object.getWidth())) {
-                isHitOnTop[1] = false;
-            }
-        }
+    public boolean isHit(IPositionable object) {
+        //!( under || over || left of || right of)
+        //over || under || left || right
+        /*
+        return !(Math.round(getY()) > object.getY() + object.getHeight()
+                || Math.round(getY()) < object.getY()
+                || Math.round(getX() + getWidth()) < object.getX()
+                || Math.round(getX()) > object.getX() + object.getWidth());
+        */
+        boolean above = object.getY() + object.getHeight() < getY();
+        boolean below = object.getY() > getY() + getHeight();
+        boolean leftOf = object.getX() + object.getWidth() < getX();
+        boolean rightOf = object.getX() > getX() + getWidth();
+        return !(above || below || leftOf || rightOf);
 
 
-        return isHitOnTop;
+
     }
 
     public void move() {

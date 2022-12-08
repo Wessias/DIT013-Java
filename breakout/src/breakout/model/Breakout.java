@@ -53,7 +53,6 @@ public class Breakout {
         // TODO  Main game loop, start functional decomposition from
 
 
-
         updateBallPos((Ball) objects.get(0));
 
         //WALL COLLISION FOR BALL
@@ -62,16 +61,19 @@ public class Breakout {
         //3. IF COLLIDES SEND IT FLYING, IF UPPER WALL dy -> -dy, IF SIDES dx -> -dx
         for (Wall wall :
                 walls) {
-            boolean[] isHitOnTop = ball.isHit(wall);
-            if (isHitOnTop[0]) {
-                if (isHitOnTop[1]) {
-                    ball.setDy(-1 * ball.getDy());
-                } else {
-                    ball.setDx(-1 * ball.getDx());
+
+                if (ball.isHit(wall)) {
+                    if (wall.getDirection() == Wall.Dir.HORIZONTAL) {
+                        ball.setDy(-1 * ball.getDy());
+                    } else {
+                        ball.setDx(-1 * ball.getDx());
+                    }
                 }
-            }
+
         }
-        if (ball.isHit(paddle)[0]) {
+
+
+        if (ball.isHit(paddle)) {
             ball.setDy(-1.1 * ball.getDy());
             EventBus.INSTANCE.publish(new ModelEvent(ModelEvent.Type.BALL_HIT_PADDLE, "data"));
         }
@@ -79,19 +81,15 @@ public class Breakout {
 
         for (Brick brick :
                 bricks) {
-            boolean[] isHitOnTop = ball.isHit(brick);
-            if (now > timeForLastHit + 100000) {
-                if (isHitOnTop[0]) {
+
+            if (now - timeForLastHit > SEC / 20) {
+                if (ball.isHit(brick)) {
                     timeForLastHit = now;
                     playerPoints += brick.getWorth();
                     bricks.remove(brick);
                     objects.remove(brick);
+                    ball.setDy( -1 * ball.getDy());
                     EventBus.INSTANCE.publish(new ModelEvent(ModelEvent.Type.BALL_HIT_BRICK, "data"));
-                    if (isHitOnTop[1]) {
-                        ball.setDy(-1 * ball.getDy());
-                    } else {
-                        ball.setDx(-1 * ball.getDx());
-                    }
                     break;
 
                 }
@@ -99,10 +97,9 @@ public class Breakout {
         }
 
 
-
         //Check if ball leaves screen
         if (!isOnScreen(ball)) {
-            if (nBalls > 0 ) {
+            if (nBalls > 0) {
                 createNewBall();
                 //Update reference. Could use a for loop to find the ball but w/e keep it at index 0.
                 objects.set(0, ball);
@@ -125,9 +122,6 @@ public class Breakout {
         if (playerPoints == 9600) {
             //end?
         }
-
-
-
 
 
     }
