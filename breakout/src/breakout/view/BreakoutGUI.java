@@ -86,12 +86,12 @@ public class BreakoutGUI extends Application implements IEventHandler {
 
         // --- Build the model -----
         // TODO Build the model (also: see methods below)
-        Ball b1 = new Ball(200, 200);
+        Ball ball = new Ball(200, 200);
         List<Wall> testWalls = new ArrayList<>(getWalls());
-        Paddle p = new Paddle(200, 300 );
+        Paddle paddle = new Paddle(200, 300 );
         List<Brick> bricks = getBricks(6, 16);
 
-        breakout = new Breakout(b1, testWalls, p, bricks);
+        breakout = new Breakout(ball, testWalls, paddle, bricks);
 
 
         // Bind bricks to images

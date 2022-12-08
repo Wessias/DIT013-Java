@@ -19,7 +19,7 @@ public class Breakout {
 
     public static final double GAME_WIDTH = 400;
     public static final double GAME_HEIGHT = 400;
-    public static final double BALL_SPEED_FACTOR = 1.05; // Increase ball speed
+    public static final double BALL_SPEED_FACTOR = 1.1; // Increase ball speed
     public static final long SEC = 1_000_000_000;  // Nano-seconds used by JavaFX
 
     private int nBalls = 5;
@@ -55,6 +55,17 @@ public class Breakout {
 
         updateBallPos((Ball) objects.get(0));
 
+        //Update Paddle movement
+        if (paddleMoving) {
+            if (moveLeft) {
+                paddle.setMovingLeft(true);
+                paddle.move();
+            } else {
+                paddle.setMovingLeft(false);
+                paddle.move();
+            }
+        }
+
         //WALL COLLISION FOR BALL
         //1. Get position of ball
         //2. Check if position collides with anything
@@ -62,36 +73,34 @@ public class Breakout {
         for (Wall wall :
                 walls) {
 
-                if (ball.isHit(wall)) {
-                    if (wall.getDirection() == Wall.Dir.HORIZONTAL) {
-                        ball.setDy(-1 * ball.getDy());
-                    } else {
-                        ball.setDx(-1 * ball.getDx());
-                    }
+            if (ball.isHit(wall)) {
+                if (wall.getDirection() == Wall.Dir.HORIZONTAL) {
+                    ball.setDy(-1 * ball.getDy());
+                } else {
+                    ball.setDx(-1 * ball.getDx());
                 }
+            }
 
         }
 
-
+        //Check paddle hit
         if (ball.isHit(paddle)) {
-            ball.setDy(-1.1 * ball.getDy());
+            ball.setDy(-BALL_SPEED_FACTOR * ball.getDy());
             EventBus.INSTANCE.publish(new ModelEvent(ModelEvent.Type.BALL_HIT_PADDLE, "data"));
         }
 
-
+        //Check brick hit
         for (Brick brick :
                 bricks) {
-
             if (now - timeForLastHit > SEC / 20) {
                 if (ball.isHit(brick)) {
                     timeForLastHit = now;
                     playerPoints += brick.getWorth();
                     bricks.remove(brick);
                     objects.remove(brick);
-                    ball.setDy( -1 * ball.getDy());
+                    ball.setDy(-1 * ball.getDy());
                     EventBus.INSTANCE.publish(new ModelEvent(ModelEvent.Type.BALL_HIT_BRICK, "data"));
                     break;
-
                 }
             }
         }
@@ -107,16 +116,7 @@ public class Breakout {
             }
         }
 
-        //Update Paddle movement
-        if (paddleMoving) {
-            if (moveLeft) {
-                paddle.setMovingLeft(true);
-                paddle.move();
-            } else {
-                paddle.setMovingLeft(false);
-                paddle.move();
-            }
-        }
+
 
 
         if (playerPoints == 9600) {
