@@ -1,7 +1,0 @@
-Codes generally substitute different length strings
-of character in the output, while ciphers generally substitute
-the same number of characters as are input.
-There are exceptions and some cipher systems may
-use slightly more, or fewer, characters when
-output versus the number that were input.
-
