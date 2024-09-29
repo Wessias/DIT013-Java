@@ -48,11 +48,4 @@ An implementation of the classic Breakout game with interactive gameplay.
 </p>
 
 ---
-
-## Getting Started
-
-To run any of these projects:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/yourrepository.git
+   
