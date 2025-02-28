@@ -14,7 +14,7 @@ A simple graphical calculator application that performs basic arithmetic operati
   - User-friendly graphical interface
 
 <p align="center">
-  <img src="path_to_calculator_screenshot.png" alt="Calculator Screenshot" width="400" />
+  <img src="calculator_screenshot.png" alt="Calculator Screenshot" width="400" />
 </p>
 
 ---
@@ -29,7 +29,7 @@ A simulation model demonstrating how neighborhood segregation can occur, inspire
   - Real-time simulation updates
 
 <p align="center">
-  <img src="path_to_neighbours_screenshot.png" alt="Neighbours Simulation Screenshot" width="400" />
+  <img src="neighbours_screenshot.png" alt="Neighbours Simulation Screenshot" width="400" />
 </p>
 
 ---
@@ -44,7 +44,7 @@ An implementation of the classic Breakout game with interactive gameplay.
   - Score tracking and lives system
 
 <p align="center">
-  <img src="path_to_breakout_screenshot.png" alt="Breakout Game Screenshot" width="400" />
+  <img src="breakout_screenshot.png" alt="Breakout Game Screenshot" width="400" />
 </p>
 
 ---
